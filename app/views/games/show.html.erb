@@ -1,0 +1,73 @@
+<% content_for :body_class, 'bg-light' %>
+
+<section class="section game-show">
+  <div class="columns">
+    <div class="column is-8">
+      <h1 class="title is-2"><%= @game.title %></h1>
+
+      <ul class="pv1">
+        <% if @game.brand? %>
+        <li class="inline-block pr3"><%= @game.brand %></li>
+        <% end %>
+
+        <li class="inline-block pr3"><%= @game.publisher %></li>
+
+        <% if @game.release_year? %>
+        <li class="inline-block pr3"><%= @game.release_year %></li>
+        <% end %>
+      </ul>
+
+      <div class="feature-image">
+        <%= image_tag(@game.image_url(:default)) unless @game.image.blank? %>
+      </div>
+
+      <div class="content pa4 mt3 bg-white border-radius-3">
+
+      <h3 class="subtitle is-4">Description</h3>
+      <%= @game.description %>
+
+
+      <h3 class="subtitle is-4 pt5">Product Specifications</h3>
+
+      <table class="table is-narrow">
+        <% if @game.release_year %>
+        <tr>
+          <td class="has-text-weight-bold">Release_Year:</td>
+          <td><%= @game.release_year %></td>
+        </tr>
+        <% end %>
+
+        <% if @game.genre %>
+          <tr>
+            <td class="has-text-weight-bold">Genre:</td>
+            <td><%= @game.genre %></td>
+          </tr>
+        <% end %>
+
+        <% if @game.brand %>
+          <tr>
+            <td class="has-text-weight-bold">Brand:</td>
+            <td><%= @game.brand %></td>
+          </tr>
+        <% end %>
+
+        <tr>
+          <td class="has-text-weight-bold">Publisher:</td>
+          <td><%= @game.publisher %></td>
+        </tr>
+      </table>
+    </div>
+    </div>
+    <div class="column is-3 is-offset-1">
+      <div class="bg-white pa4 border-radius-3">
+        <h4 class="title is-5 has-text-centered"><%= number_to_currency(@game.price) %></h4>
+        <p class="has-text-centered mb4"><b>Sold by:</b> <%= @game.user.name %></p>
+        <%= button_to 'Add Game to your cart', line_items_path(game_id: @game), class: 'button is-info add-to-cart' %>
+      </div>
+    </div>
+  </div>
+
+  <% if game_author(@game) %>
+    <%= link_to 'Edit', edit_game_path(@game), class: 'button' %>
+  <% end %>
+</section>

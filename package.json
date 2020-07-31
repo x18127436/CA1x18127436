@@ -1,0 +1,7 @@
+{
+  "name": "CA1x18127436",
+  "private": true,
+  "dependencies": {
+    "startbootstrap-agency": "file:startbootstrap-agency"
+  }
+}
