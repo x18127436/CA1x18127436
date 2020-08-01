@@ -55,7 +55,7 @@ gem 'gravatar_image_tag', '~> 1.2'
 #gem 'mini_magick'
 #gem 'rmagick'
 #gem 'rmagick', '~> 4.1.2'
-gem 'mini_magick','4.5.1'
+gem 'mini_magick','4.9.4'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
