@@ -18,7 +18,7 @@ gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use bootstrap-sass
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 # Use bootstrap
 #gem 'bootstrap', '~> 4.0.0.alpha3'
 #source 'https://rails-assets.org' do
