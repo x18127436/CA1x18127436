@@ -38,7 +38,7 @@
               <label class="label">Brand</label>
               <div class="control has-icons-left">
                 <span class="select">
-                  <%= f.input_field :brand, collection: Game::BRAND, prompt: "Select brand" %>
+                  <%= f.input_field :brand, required: true, collection: Game::BRAND, prompt: "Select Platform" %>
                 </span>
                 <span class="icon is-small is-left">
                   <i class="fa fa-tag"></i>
@@ -52,7 +52,7 @@
               <label class="label">Genre</label>
               <div class="control has-icons-left">
                 <span class="select">
-                  <%= f.input_field :genre, collection: Game::GENRE, prompt: "Select genre" %>
+                  <%= f.input_field :genre, required: true, collection: Game::GENRE, prompt: "Select genre" %>
                 </span>
                 <span class="icon is-small is-left">
                   <i class="fa fa-paint-brush"></i>
@@ -66,7 +66,7 @@
               <label class="label">Release_Year</label>
               <div class="control has-icons-left">
                 <span class="select">
-                  <%= f.input_field :release_year, collection: Game::RELEASE_YEAR, prompt: "Select release year" %>
+                  <%= f.input_field :release_year, required: true, collection: Game::RELEASE_YEAR, prompt: "Select release year" %>
                 </span>
                 <span class="icon is-small is-left">
                   <i class="fa fa-paint-brush"></i>
